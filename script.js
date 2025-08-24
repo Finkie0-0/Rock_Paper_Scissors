@@ -20,9 +20,12 @@ function getComputerChoice(){
         return (`Paper`);
     }else{
         return (`Scissors`);
-    }
-    
-    
+    } 
 }
 
-console.log(getComputerChoice());
+// Create a function that will take in a users's input
+// Ensure that the input is a string
+// Use the prompt method to get the use's input
+
+//move = prompt("What's if your move? ");
+//return move
