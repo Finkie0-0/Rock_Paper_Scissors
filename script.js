@@ -36,3 +36,9 @@ function getHumanChoice(){
     let move = prompt("What is your move, Rock, Paper or Scissors? ");
     return (move);
 };
+
+//Create the scores for both the Human and the computer.
+//Start both side as zero
+
+let humanScore = 0;
+let computerScore = 0;
