@@ -29,3 +29,10 @@ function getComputerChoice(){
 
 //move = prompt("What's if your move? ");
 //return move
+
+//Make the user choice function
+
+function getHumanChoice(){
+    let move = prompt("What is your move, Rock, Paper or Scissors? ");
+    return (move);
+};
