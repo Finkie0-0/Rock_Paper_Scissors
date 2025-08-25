@@ -34,7 +34,7 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let move = prompt("What is your move, Rock, Paper or Scissors? ");
-    return (move.toLowerCase);
+    return (move);
 };
 
 //Create the scores for both the Human and the computer.
@@ -58,23 +58,53 @@ let computerScore = 0;
 // humanChoice.toLowerCase()
 
 function playRound (computerChoice, humanChoice){
-
-
+    
+    //Human loses
+    let ruling = "";
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore ++;
-        return ("You Lose! Rock beats Scissors");
-    } else if(humanChoice === "rock" && computerChoice === "scissors"){
-        humanChoice ++;
-        return ("You Win! Rock beats Scissors")
-//Rock beats Scissors here
-    }else if(computerChoice === "rock" && humanChoice === "paper"){
-        humanChoice ++;
-        return ("You Win! Paper beats Rock!")
-    }else if(humanChoice === "rock" && computerChoice === "paper"){
+        ruling = "You lose! Rock beats Scissor.";
+        return ruling;
+    }else if (computerChoice === "scissors" && humanChoice === "paper"){
         computerScore ++;
-        return("You Lose! Paper beat Rock!")
+        ruling ="You lose! Scissor beats Paper.";
+        return ruling;
+    }else if (computerChoice === "paper" && humanChoice === "rock"){
+        computerScore ++;
+        ruling = "You lose! Paper beats Rock.";
+        return ruling;
     }
-// Paper beats Rock
-}
 
-console.log(playRound(getComputerChoice(),getHumanChoice()));
+    //Human wins
+
+    else if(humanChoice === "rock" && computerChoice === "scissos"){
+        humanScore ++;
+        ruling = "You win! Rock beats Scissor.";
+        return ruling;
+    }else if ( humanChoice === "scissors" && computerChoice === "paper"){
+        humanScore ++;
+        ruling = "You win! Scissor beats Paper.";
+        return ruling;
+    }else if (humanChoice === "paper" && computerChoice === "rock"){
+        humanScore ++;
+        ruling = "You win! Paper beats Rock.";
+        return ruling;
+    };
+
+    //Draws
+
+    if (computerChoice == humanChoice){
+        ruling = "Draw";
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
+    };
+
+};
+
+const humanSelection = getHumanChoice().toLowerCase();
+const computerSelection = getComputerChoice();
+
+// console.log (computerSelection);
+// console.log(humanSelection);
+
+console.log(playRound(computerSelection,humanSelection));
+
