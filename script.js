@@ -34,7 +34,7 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let move = prompt("What is your move, Rock, Paper or Scissors? ");
-    return (move);
+    return (move.toLowerCase);
 };
 
 //Create the scores for both the Human and the computer.
@@ -69,12 +69,12 @@ function playRound (computerChoice, humanChoice){
 //Rock beats Scissors here
     }else if(computerChoice === "rock" && humanChoice === "paper"){
         humanChoice ++;
-        return ("You Win! Paper beats Rock")
+        return ("You Win! Paper beats Rock!")
     }else if(humanChoice === "rock" && computerChoice === "paper"){
         computerScore ++;
         return("You Lose! Paper beat Rock!")
     }
-// 
+// Paper beats Rock
 }
 
 console.log(playRound(getComputerChoice(),getHumanChoice()));
