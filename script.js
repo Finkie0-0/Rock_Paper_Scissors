@@ -48,4 +48,33 @@ let computerScore = 0;
 // Return a winning message after the choices have been compared and logically modified
 // Increase the score of the winner after the playing
 
+//Rock beats Scissors
+// Rock loses against paper
+//Paper beats Rock
+// Paper loses against Scissors
+//Scissors beat Paper
+// Scissors loses against Rock
+
 // humanChoice.toLowerCase()
+
+function playRound (computerChoice, humanChoice){
+
+
+    if (computerChoice === "rock" && humanChoice === "scissors"){
+        computerScore ++;
+        return ("You Lose! Rock beats Scissors");
+    } else if(humanChoice === "rock" && computerChoice === "scissors"){
+        humanChoice ++;
+        return ("You Win! Rock beats Scissors")
+//Rock beats Scissors here
+    }else if(computerChoice === "rock" && humanChoice === "paper"){
+        humanChoice ++;
+        return ("You Win! Paper beats Rock")
+    }else if(humanChoice === "rock" && computerChoice === "paper"){
+        computerScore ++;
+        return("You Lose! Paper beat Rock!")
+    }
+// 
+}
+
+console.log(playRound(getComputerChoice(),getHumanChoice()));
