@@ -103,8 +103,22 @@ function playRound (computerChoice, humanChoice){
 const humanSelection = getHumanChoice().toLowerCase();
 const computerSelection = getComputerChoice();
 
-// console.log (computerSelection);
-// console.log(humanSelection);
+console.log (computerSelection);
+console.log(humanSelection);
 
-console.log(playRound(computerSelection,humanSelection));
-
+//Make sure the playRound function repeat 5 times
+//Use a loop to repeat the function while incrementing on the scores part of the both human and computer
+//i = 0
+//while i<5
+//loop through the playRound function
+// if Human wins add one on the human score, if computer wins add one to the computer score
+// i++
+// try using include in the wins
+let wins = playRound(computerSelection, humanSelection);
+let word1 = "win";
+let word2 = "lose";
+if (wins.includes(word1)){
+    console.log(`${word1} you win!`);
+}else if (wins.includes(word2)){
+    console.log(`${word2} you lose!`);
+}
