@@ -64,15 +64,15 @@ function playRound (computerChoice, humanChoice){
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore ++;
         ruling = "You lose! Rock beats Scissor.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     }else if (computerChoice === "scissors" && humanChoice === "paper"){
         computerScore ++;
         ruling ="You lose! Scissor beats Paper.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     }else if (computerChoice === "paper" && humanChoice === "rock"){
         computerScore ++;
         ruling = "You lose! Paper beats Rock.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     }
 
     //Human wins
@@ -80,15 +80,15 @@ function playRound (computerChoice, humanChoice){
     else if(humanChoice === "rock" && computerChoice === "scissos"){
         humanScore ++;
         ruling = "You win! Rock beats Scissor.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     }else if ( humanChoice === "scissors" && computerChoice === "paper"){
         humanScore ++;
         ruling = "You win! Scissor beats Paper.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     }else if (humanChoice === "paper" && computerChoice === "rock"){
         humanScore ++;
         ruling = "You win! Paper beats Rock.";
-        return ruling;
+        return `Ruling ${ruling} and the score for computer: ${computerScore} vs human ${humanScore}`;
     };
 
     //Draws
@@ -103,8 +103,8 @@ function playRound (computerChoice, humanChoice){
 const humanSelection = getHumanChoice().toLowerCase();
 const computerSelection = getComputerChoice();
 
-console.log (computerSelection);
-console.log(humanSelection);
+// console.log (computerSelection);
+// console.log(humanSelection);
 
 //Make sure the playRound function repeat 5 times
 //Use a loop to repeat the function while incrementing on the scores part of the both human and computer
@@ -114,11 +114,35 @@ console.log(humanSelection);
 // if Human wins add one on the human score, if computer wins add one to the computer score
 // i++
 // try using include in the wins
-let wins = playRound(computerSelection, humanSelection);
-let word1 = "win";
-let word2 = "lose";
-if (wins.includes(word1)){
-    console.log(`${word1} you win!`);
-}else if (wins.includes(word2)){
-    console.log(`${word2} you lose!`);
-}
+
+//Testing "include"
+// let wins = playRound(computerSelection, humanSelection);
+// let word1 = "win";
+// let word2 = "lose";
+// if (wins.includes(word1)){
+//     console.log(`${word1} you win!`);
+// }else if (wins.includes(word2)){
+//     console.log(`${word2} you lose!`);
+// }
+
+// function playGame(){
+//     //using a loop to make rounds for the game
+//     let ruling = playRound(computerSelection,humanSelection);
+
+//     let counter = 0;
+
+//     while (counter < 5) {
+//         if (playRound(computerSelection(),humanSelection()).includes("win")){
+//             console.log(humanScore++);
+//         } else if (playRound(computerSelection(),humanSelection()).includes("lose")){
+//             console.log(computerScore++);
+//         };
+//         counter ++;
+//     }
+        
+   
+//     return `ComputerScore ${computerScore} vs HumanScore ${humanScore}`;
+// };
+
+
+
