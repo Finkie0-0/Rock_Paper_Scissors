@@ -125,6 +125,8 @@ const computerSelection = getComputerChoice();
 //     console.log(`${word2} you lose!`);
 // }
 
+//Attempt #1
+
 // function playGame(){
 //     //using a loop to make rounds for the game
 //     let ruling = playRound(computerSelection,humanSelection);
@@ -144,5 +146,36 @@ const computerSelection = getComputerChoice();
 //     return `ComputerScore ${computerScore} vs HumanScore ${humanScore}`;
 // };
 
+//Attempt #2: Reworking the play game function
 
+//loses
 
+function loses(computerChoice, humanChoice){
+    
+    //Human loses
+
+    if (computerChoice === "rock" && humanChoice === "scissor"){
+        computerScore ++;
+    }else if(computerChoice === "scissor" && humanChoice === "paper"){
+        computerScore ++;
+    }else if(computerChoice === "paper" && humanChoice === "rock"){
+        computerScore ++;
+    }
+
+    return (`Computers' score :${computerScore} computerSelection: ${computerChoice} vs humanSelection: ${humanChoice}.`)
+}
+
+function wins(computerChoice, humanChoice){
+
+    // Human wins
+    if (computerChoice === "scissor" && humanChoice === "rock"){
+        humanScore ++;
+    } else if(computerChoice === "paper" && humanChoice === "scissor"){
+        humanScore ++;
+    }else if(computerChoice === "rock" && humanChoice === "paper"){
+        humanScore ++;
+    }
+    return (`Computers' score :${humanScore} computerSelection: ${computerChoice} vs humanSelection: ${humanChoice}.`)
+}
+console.log(loses(computerSelection,humanSelection));
+console.log(wins(computerSelection,humanSelection));
