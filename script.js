@@ -162,7 +162,7 @@ function loses(computerChoice, humanChoice){
         computerScore ++;
     }
 
-    return (`Computers' score :${computerScore} computerSelection: ${computerChoice} vs humanSelection: ${humanChoice}.`)
+    return 0;
 }
 
 function wins(computerChoice, humanChoice){
@@ -175,7 +175,12 @@ function wins(computerChoice, humanChoice){
     }else if(computerChoice === "rock" && humanChoice === "paper"){
         humanScore ++;
     }
-    return (`Computers' score :${humanScore} computerSelection: ${computerChoice} vs humanSelection: ${humanChoice}.`)
+    return 1;
 }
-console.log(loses(computerSelection,humanSelection));
-console.log(wins(computerSelection,humanSelection));
+
+function draws (){
+    if (computerSelection === humanSelection){
+        return(`Human selection: ${humanSelection} vs Computer Selection: ${computerSelection} are equal so it's a draw!`);
+    }
+}
+console.log(draws())
