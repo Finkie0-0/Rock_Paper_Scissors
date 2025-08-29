@@ -127,60 +127,61 @@ const computerSelection = getComputerChoice();
 
 //Attempt #1
 
-// function playGame(){
-//     //using a loop to make rounds for the game
-//     let ruling = playRound(computerSelection,humanSelection);
+function playGame(){
+    //using a loop to make rounds for the game
+    let ruling = playRound(computerSelection,humanSelection);
 
-//     let counter = 0;
+    let counter = 0;
 
-//     while (counter < 5) {
-//         if (playRound(computerSelection(),humanSelection()).includes("win")){
-//             console.log(humanScore++);
-//         } else if (playRound(computerSelection(),humanSelection()).includes("lose")){
-//             console.log(computerScore++);
-//         };
-//         counter ++;
-//     }
+    while (counter < 5) {
+        if (playRound(computerSelection,humanSelection).includes("win")){
+            console.log(humanScore++);
+        } else if (playRound(computerSelection,humanSelection).includes("lose")){
+            console.log(computerScore++);
+        };
+        counter ++;
+    }
         
    
-//     return `ComputerScore ${computerScore} vs HumanScore ${humanScore}`;
-// };
+    return `ComputerScore ${computerScore} vs HumanScore ${humanScore}`;
+};
 
 //Attempt #2: Reworking the play game function
 
 //loses
 
-function loses(computerChoice, humanChoice){
+// function loses(computerChoice, humanChoice){
     
-    //Human loses
+//     //Human loses
 
-    if (computerChoice === "rock" && humanChoice === "scissor"){
-        computerScore ++;
-    }else if(computerChoice === "scissor" && humanChoice === "paper"){
-        computerScore ++;
-    }else if(computerChoice === "paper" && humanChoice === "rock"){
-        computerScore ++;
-    }
+//     if (computerChoice === "rock" && humanChoice === "scissor"){
+//         computerScore ++;
+//     }else if(computerChoice === "scissor" && humanChoice === "paper"){
+//         computerScore ++;
+//     }else if(computerChoice === "paper" && humanChoice === "rock"){
+//         computerScore ++;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
-function wins(computerChoice, humanChoice){
+// function wins(computerChoice, humanChoice){
 
-    // Human wins
-    if (computerChoice === "scissor" && humanChoice === "rock"){
-        humanScore ++;
-    } else if(computerChoice === "paper" && humanChoice === "scissor"){
-        humanScore ++;
-    }else if(computerChoice === "rock" && humanChoice === "paper"){
-        humanScore ++;
-    }
-    return 1;
-}
+//     // Human wins
+//     if (computerChoice === "scissor" && humanChoice === "rock"){
+//         humanScore ++;
+//     } else if(computerChoice === "paper" && humanChoice === "scissor"){
+//         humanScore ++;
+//     }else if(computerChoice === "rock" && humanChoice === "paper"){
+//         humanScore ++;
+//     }
+//     return 1;
+// }
 
-function draws (){
-    if (computerSelection === humanSelection){
-        return(`Human selection: ${humanSelection} vs Computer Selection: ${computerSelection} are equal so it's a draw!`);
-    }
-}
-console.log(draws())
+// function draws (){
+//     if (computerSelection === humanSelection){
+//         return(`Human selection: ${humanSelection} vs Computer Selection: ${computerSelection} are equal so it's a draw!`);
+//     }
+// };
+
+console.log(playGame())
