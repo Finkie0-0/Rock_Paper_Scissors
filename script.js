@@ -8,13 +8,34 @@ function getComputerChoice(){
     //Assigning the numarical values to the outcomes
     if (outCome === 0){
         move = "Rock";
-        return move.toLowerCase();
+        return move.toUpperCase();
     } else if (outCome === 1){
         move = "Paper";
-        return move.toLowerCase();
+        return move.toUpperCase();
     }else if (outCome === 2){
         move = "Scissor";
-        return move.toLowerCase();
+        return move.toUpperCase();
     }
 };
-console.log(getComputerChoice())
+
+// Create a function that will get the human's choices that they enter
+
+function getHumanChoice(){
+    let move = prompt("Rock, Paper or Scissor?");
+    return move.toUpperCase();
+};
+
+// function repeats(max){
+//     for (i = 0; i < max; i++){
+//         let move = getHumanChoice();
+//         console.log(`Guesses: ${move}.`);
+//     }
+// }
+
+// repeats(5);
+
+// Creating scores for both Computer and the Player initializing at 0
+
+let humanScore = 0;
+let computerScore = 0;
+
