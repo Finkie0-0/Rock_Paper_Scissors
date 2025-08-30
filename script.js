@@ -39,3 +39,29 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+// Write the logic in playing one round of the game of rock paper scissor
+
+function playRound(humanChoice, computerChoice){
+    // Loses
+
+    if (humanChoice === "ROCK" && computerChoice === "PAPER" ||
+        humanChoice === "SCISSOR" && computerChoice === "ROCK" ||
+        humanChoice === "PAPER" && computerChoice === "SCISSOR"){
+            computerScore ++;
+            return (`You lose! ${computerChoice} beats ${humanChoice}!`)
+        } else if (
+            humanChoice === "PAPER" && computerChoice === "ROCK" ||
+            humanChoice === "ROCK" && computerChoice === "SCISSOR" ||
+            humanChoice === "SCISSOR" && computerChoice === "PAPER"
+        ){
+            humanScore++;
+            return(`You Win! ${humanChoice} beats ${computerChoice}!`)
+        }else{
+            return(`Draw Game!`)
+        }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection,computerSelection);
