@@ -65,3 +65,11 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection,computerSelection);
+
+console.log(playRound(humanSelection,computerSelection));
+
+function repeats(max){
+    for(i = 0; i < max; i++){
+        
+    }
+}
