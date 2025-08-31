@@ -92,9 +92,9 @@ function repeats(max = 5){
     }
     console.log(`Human score: ${humanScore} vs Computer score: ${computerScore}.`);
     if (humanScore > computerScore){
-        console.log(`The Human is winner!`);
+        console.log(`You win!`);
     }else if(humanScore < computerScore){
-        console.log(`The computer wins! This time.`);
+        console.log(`You lose! Better luck next time!`);
     }else if( humanScore == computerScore){
         console.log(`This is a draw game my guy!`);
     }
