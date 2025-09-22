@@ -1,5 +1,3 @@
-// Computer function that will return rock paper or scissors
-
 function getComputerChoice(){
     
     let outCome = Math.floor(Math.random() *3); // Creating values for the outcomes
@@ -18,16 +16,12 @@ function getComputerChoice(){
     }
 };
 
-// Create a function that will get the human's choices that they enter
 
 function getHumanChoice(){
     let move = prompt("Rock, Paper or Scissor?");
     return move.toUpperCase();
 };
 
-
-
-// Creating scores for both Computer and the Player initializing at 0
 
 let humanScore = 0;
 let computerScore = 0;
@@ -68,10 +62,6 @@ for (i = 1; i < 6; i ++){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-// playRound(humanSelection,computerSelection);
-
-// console.log(playRound(humanSelection,computerSelection));
-
 // The Game between the user and the Computer
 // Human has to enter 3 
 function repeats(max = 5){
@@ -80,7 +70,6 @@ function repeats(max = 5){
         let computerMove = getComputerChoice();
         let drawGame = "Draw Game";
 
-        // console.log(`Human moves: ${humanMove} vs Computer moves: ${computerMove}.`);
         if (humanMove === "ROCK" && computerMove === "PAPER" || humanMove === "PAPER" && computerMove === "SCISSOR" || humanMove === "SCISSOR" && computerMove === "ROCK"){
             computerScore++;
         }else if (humanMove == computerMove){
